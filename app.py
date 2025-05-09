@@ -14,8 +14,8 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your-secret-key-here'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///doccure.db'
 
-blueprint =  make_google_blueprint(client_id='491409055152-fjapkvj7u8iogf4ulgpm6idunhde4pmr.apps.googleusercontent.com',
-                                   client_secret='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',
+blueprint =  make_google_blueprint(client_id='your-client-id',
+                                   client_secret='your-secret-id',
                                    scope=['profile', 'email'])
 
 app.register_blueprint(blueprint, url_prefix='/login')
